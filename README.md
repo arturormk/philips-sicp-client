@@ -1,5 +1,7 @@
 # Philips SICP Python Client
 
+[![CI](https://github.com/arturormk/philips-sicp-client/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/arturormk/philips-sicp-client/actions/workflows/ci.yml)
+
 Small, dependency-free Python CLI for the Philips Serial / Ethernet Interface
 Communication Protocol (SICP).
 
