@@ -1,0 +1,54 @@
+name: Command support request
+description: Request support for a Philips SICP command group or value mapping.
+title: "[Command]: "
+labels: ["enhancement", "protocol"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this for new command groups, missing values, or model-specific command behavior.
+  - type: input
+    id: command_group
+    attributes:
+      label: Command group
+      placeholder: "Example: backlight, PIP, screenshot"
+    validations:
+      required: true
+  - type: textarea
+    id: goal
+    attributes:
+      label: Goal
+      description: What should the CLI be able to do?
+    validations:
+      required: true
+  - type: textarea
+    id: protocol
+    attributes:
+      label: Protocol details
+      description: DATA[] bytes, report format, accepted values, or relevant documentation excerpt.
+      render: text
+  - type: textarea
+    id: observed
+    attributes:
+      label: Observed packet logs
+      description: Include raw request/response packets when available. Redact private details.
+      render: text
+  - type: input
+    id: display_model
+    attributes:
+      label: Display model
+  - type: input
+    id: firmware
+    attributes:
+      label: Firmware version
+  - type: dropdown
+    id: risk
+    attributes:
+      label: Command risk
+      options:
+        - Read-only
+        - Configuration change
+        - Restart/reset/destructive
+        - Unknown
+    validations:
+      required: true

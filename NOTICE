@@ -1,0 +1,14 @@
+Philips SICP Python Client
+
+This project is an independent Python client for the Philips Serial / Ethernet
+Interface Communication Protocol (SICP). It is not affiliated with, endorsed by,
+or sponsored by Philips, TPV, or PPDS.
+
+Philips and related product names are trademarks or registered trademarks of
+their respective owners. They are used in this project only to identify display
+models and protocol compatibility.
+
+The implementation and project documentation are based on observed behavior,
+publicly available information, and development notes from SICP protocol
+materials. The protocol reference in docs/ is retained as development
+documentation for interoperability.

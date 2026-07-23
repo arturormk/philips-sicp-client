@@ -1,0 +1,69 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "philips-sicp-client"
+version = "0.1.0"
+description = "Dependency-free Python CLI and client library for Philips SICP displays."
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+license-files = ["LICENSE", "NOTICE"]
+authors = [
+    { name = "Arturo R Montesinos" },
+]
+keywords = [
+    "philips",
+    "sicp",
+    "display",
+    "signage",
+    "cli",
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "Intended Audience :: System Administrators",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+    "Topic :: System :: Hardware",
+    "Topic :: Utilities",
+]
+dependencies = []
+
+[project.scripts]
+sicp = "philips_sicp.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/arturormk/philips-sicp-client"
+Issues = "https://github.com/arturormk/philips-sicp-client/issues"
+Source = "https://github.com/arturormk/philips-sicp-client"
+
+[tool.setuptools]
+packages = ["philips_sicp"]
+
+[tool.uv]
+package = true
+
+[dependency-groups]
+dev = [
+    "mypy>=2.3.0",
+    "ruff>=0.15.22",
+]
+
+[tool.ruff]
+target-version = "py310"
+line-length = 88
+
+[tool.ruff.lint]
+select = ["E", "F", "B", "I", "UP", "RUF"]
+
+[tool.mypy]
+python_version = "3.10"
+files = ["philips_sicp", "sicp.py"]
+strict = true
